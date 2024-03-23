@@ -32,7 +32,7 @@ Para explorar os exemplos de um padrão de design específico, navegue até a br
 Substitua `nome_do_padrao` pelo nome do padrão de design que deseja explorar. Por exemplo, para explorar o padrão Singleton, use:
 
 ```bash
-`git checkout Singleton`
+`git checkout builder`
 ```
 Dentro de cada branch, você encontrará um README detalhado com informações sobre o padrão e exemplos de código explicativos.
 
