@@ -1,10 +1,9 @@
 package conta;
 
-public class ContaCorrente extends Conta{
+public class ContaPoupanca extends Conta{
+
     @Override
     public void sacar() {}
     @Override
     public void depositar() {}
-
 }
-

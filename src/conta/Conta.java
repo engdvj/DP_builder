@@ -5,6 +5,7 @@ public abstract class Conta implements ContaBancaria{
     private int numeroConta;
     private double saldo;
     private String cliente;
+    private String tipo;
 
     public Conta agencia(int agencia) {
         this.agencia = agencia;
@@ -26,7 +27,12 @@ public abstract class Conta implements ContaBancaria{
         return this;
     }
 
-    protected Conta() {}
+    public Conta tipo(String tipo) {
+        this.tipo = tipo;
+        return this;
+    }
+
+    protected Conta (){}
 
     @Override
     public String toString() {
@@ -35,6 +41,7 @@ public abstract class Conta implements ContaBancaria{
                ", numeroConta=" + numeroConta +
                ", saldo=" + saldo +
                ", cliente='" + cliente + '\'' +
+               ", tipo='" + tipo + '\'' +
                '}';
     }
 }
