@@ -42,4 +42,4 @@ Contribuições são sempre bem-vindas! Se você quiser adicionar exemplos de ou
 
 ## Licença
 
-Este repositório é distribuído sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este repositório não tem nenhuma licença atribuída.
