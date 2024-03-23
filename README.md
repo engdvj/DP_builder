@@ -1,22 +1,45 @@
-# Funcionamento
+# Estudos sobre Design Patterns em Java
 
-Esse sistema permite criar contas correntes com informações como saldo, número da conta, agência e nome do cliente. Isso é feito de maneira fluída e intuitiva graças ao padrão Builder, que nos ajuda a evitar a necessidade de um construtor com muitos parâmetros, tornando o código mais limpo e fácil de entender.
+Bem-vindo ao meu repositório de estudos sobre Design Patterns (Padrões de Projeto) utilizando Java. Este repositório é uma coleção de exemplos práticos e explicações sobre diferentes padrões de design, cada um representado em sua própria branch.
 
-## Implementação do Padrão Builder
-O padrão Builder é implementado através de métodos na classe Conta que retornam a própria instância da classe (this), permitindo a encadeação de chamadas de métodos. A classe ContaCorrente estende Conta e utiliza um método estático build para iniciar a construção.
+## Sobre Design Patterns
 
-## Exemplo de Uso
+Design Patterns são soluções típicas para problemas comuns em design de software. Eles representam as melhores práticas usadas por desenvolvedores experientes para resolver problemas de design de software. Os padrões de design podem acelerar o processo de desenvolvimento, fornecendo paradigmas de soluções testadas e comprovadas.
 
-```java
-Conta contaCorrente = ContaCorrente.build()
-                        .saldo(500)
-                        .numeroConta(123456)
-                        .agencia(1)
-                        .cliente("Davi");
+## Estrutura do Repositório
+
+A branch `main` contém apenas este README. Para cada padrão de design estudado, há uma branch dedicada com exemplos de código e uma explicação detalhada sobre como o padrão funciona e em quais cenários ele pode ser aplicado.
+
+### Padrões de Design Disponíveis
+
+Aqui está uma lista dos padrões de design que você encontrará neste repositório (esta lista será atualizada conforme novos padrões forem adicionados):
+<!-- 
+
+- **Singleton**: Garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a ela.
+- **Observer**: Define uma dependência um-para-muitos entre objetos de maneira que quando um objeto muda de estado, todos os seus dependentes são notificados e atualizados automaticamente.
+- **Factory Method**: Define uma interface para criar um objeto, mas deixa as subclasses decidirem que classe instanciar.
+-->
+
+- **Builder**: Separa a construção de um objeto complexo da sua representação, de forma que o mesmo processo de construção possa criar diferentes representações.
+
+### Como Explorar
+
+Para explorar os exemplos de um padrão de design específico, navegue até a branch correspondente usando o comando:
+
+```bash
+`git checkout nome_do_padrao`
 ```
+Substitua `nome_do_padrao` pelo nome do padrão de design que deseja explorar. Por exemplo, para explorar o padrão Singleton, use:
 
-Este código cria uma nova conta corrente com um saldo inicial de 500, número da conta 123456, agência 1 e cliente chamado Davi.
+```bash
+`git checkout Singleton`
+```
+Dentro de cada branch, você encontrará um README detalhado com informações sobre o padrão e exemplos de código explicativos.
 
-## Como Executar
+## Contribuições
 
-Para executar o projeto, compile e rode a classe Main, que demonstra a criação de uma conta corrente usando o padrão Builder.
+Contribuições são sempre bem-vindas! Se você quiser adicionar exemplos de outros padrões de design ou melhorar os exemplos existentes, fique à vontade para criar um pull request.
+
+## Licença
+
+Este repositório é distribuído sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
