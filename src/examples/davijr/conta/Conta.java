@@ -1,4 +1,4 @@
-package conta;
+package examples.davijr.conta;
 
 public abstract class Conta implements ContaBancaria{
     private int agencia;

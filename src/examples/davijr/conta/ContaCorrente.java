@@ -1,4 +1,4 @@
-package conta;
+package examples.davijr.conta;
 
 public class ContaCorrente extends Conta{
     private ContaCorrente() {

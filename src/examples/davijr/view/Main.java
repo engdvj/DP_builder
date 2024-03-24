@@ -1,7 +1,7 @@
-package view;
+package examples.davijr.view;
 
-import conta.Conta;
-import conta.ContaCorrente;
+import examples.davijr.conta.Conta;
+import examples.davijr.conta.ContaCorrente;
 
 public class Main {
     public static void main(String[] args) {
