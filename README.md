@@ -15,12 +15,12 @@ A branch `main` contém apenas este README. Para cada padrão de design estudado
 Aqui está uma lista dos padrões de design que você encontrará neste repositório (esta lista será atualizada conforme novos padrões forem adicionados):
 <!-- 
 
-- **Singleton**: Garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a ela.
 - **Observer**: Define uma dependência um-para-muitos entre objetos de maneira que quando um objeto muda de estado, todos os seus dependentes são notificados e atualizados automaticamente.
-- **Factory Method**: Define uma interface para criar um objeto, mas deixa as subclasses decidirem que classe instanciar.
 -->
 
 - **Builder**: Separa a construção de um objeto complexo da sua representação, de forma que o mesmo processo de construção possa criar diferentes representações.
+- **Factory Method**: Define uma interface para criar um objeto, mas deixa as subclasses decidirem que classe instanciar.
+- **Singleton**: Garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a ela.
 
 ### Como Explorar
 
