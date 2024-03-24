@@ -1,32 +1,40 @@
-# Entendendo o Padrão Builder
+# Entendendo o Padrão Singleton
 
-O padrão Builder é uma solução de design de software que é usada para construir objetos complexos passo a passo. Ao contrário de outros padrões criacionais, que muitas vezes requerem que um objeto seja construído em uma única chamada a um construtor com vários parâmetros, o Builder permite que os objetos sejam construídos por meio de várias chamadas a métodos específicos antes da finalização do objeto. Isso não apenas melhora a legibilidade do código, mas também facilita a manutenção, uma vez que cada aspecto da construção do objeto é tratado de forma modular.
+O padrão Singleton é um dos padrões de design criacional que visa garantir que uma classe tenha apenas uma instância em todo o programa, proporcionando um ponto global de acesso a essa instância. Este padrão é particularmente útil quando você precisa de um controle rigoroso sobre como e quando o acesso é concedido a um recurso compartilhado ou uma entidade única, como uma conexão de banco de dados, uma agenda de contatos, ou configurações globais.
 
-## Como o Padrão Builder Funciona
+## Como o Padrão Singleton Funciona
 
-No coração do padrão Builder está a ideia de separar a construção de um objeto complexo da sua representação. Isso permite que o mesmo processo de construção possa criar diferentes representações. Para alcançar isso, o padrão geralmente envolve:
+A ideia central do padrão Singleton é impedir a criação de múltiplas instâncias de uma classe, assegurando um único ponto de acesso global a essa instância. Para isso, o padrão Singleton tipicamente envolve:
 
-- Um **Builder** que declara métodos para definir as partes do objeto complexo. Esses métodos retornam o próprio Builder, permitindo chamadas encadeadas (chaining).
-- Uma **Diretor** (opcional) que encarrega-se de orquestrar a construção com um ou vários builders.
-- Um **Produto**, que é o objeto complexo que está sendo construído.
+- **Privatização do construtor**: Impede a criação de instâncias fora da classe.
+- **Criação de um método estático**: Que permite aos clientes acessarem a única instância da classe.
+- **Armazenamento da instância única**: Geralmente, dentro de um atributo estático privado da classe.
 
-## Aplicação do Padrão Builder
+Existem várias maneiras de implementar o padrão Singleton em Java, incluindo o uso de campos estáticos, classes internas estáticas, e o modelo baseado em enumeração, que é considerado o método mais simples e seguro para implementar Singletons a partir do Java 5.
 
-Considerando o código fornecido como exemplo, podemos ver o padrão Builder em ação na criação de uma instância de `ContaCorrente`. Este exemplo simplifica a criação de uma examples.davijr.conta corrente, evitando a necessidade de um construtor complexo e permitindo uma inicialização fluída e intuitiva dos objetos.
+## Aplicação do Padrão Singleton
+
+No exemplo fornecido, `AgendaSingletonEnum` ilustra uma implementação eficaz e thread-safe do padrão Singleton usando enumeração. Este método combina a simplicidade da criação de instâncias com garantias de segurança em ambientes multithread.
 
 ### Exemplo de Uso
 
-
 ```java
-Conta contaCorrente = ContaCorrente.build()
-                        .saldo(500)
-                        .numeroConta(123456)
-                        .agencia(1)
-                        .cliente("Davi");`
+package examples.davijr.classes;
+
+public class Main {
+    public static void main(String[] args) {
+        AgendaSingletonEnum agenda = AgendaSingletonEnum.getInstance();
+
+        Cliente cliente = new Cliente("Davi", "12345678900", "davi@example.com");
+        agenda.addCliente(cliente);
+
+        System.out.println(agenda.getAgenda());
+    }
+}
 ```
 
-Neste fragmento de código, a classe `ContaCorrente` estende `Conta` e utiliza um método estático `build` para iniciar a construção. Cada chamada subsequente a métodos como `saldo`, `numeroConta`, `agencia`, e `cliente` ajusta um aspecto específico da `ContaCorrente`, antes de finalizar a construção. O resultado é uma nova examples.davijr.conta corrente com um saldo inicial de 500, número da examples.davijr.conta 123456, agência 1, e cliente chamado Davi, demonstrando uma aplicação prática do padrão Builder para simplificar a criação de objetos complexos.
+Neste fragmento de código, `AgendaSingletonEnum` é usado para gerenciar uma lista de clientes (`agenda`). Ao chamar `AgendaSingletonEnum.getInstance()`, temos acesso à única instância de `AgendaSingletonEnum`. O método `addCliente` permite adicionar novos clientes à agenda, demonstrando como o padrão Singleton pode ser utilizado para criar e gerenciar um recurso compartilhado de forma controlada e segura.
 
 ## Executando o Projeto
 
-Para ver o padrão Builder em ação, compile e execute a classe `Main`, que demonstra a criação de uma `ContaCorrente` usando o padrão Builder, conforme ilustrado acima.
+Para experimentar o padrão Singleton em ação, compile e execute a classe `Main`. Você verá que, independentemente de quantas vezes você recupera a instância de `AgendaSingletonEnum` ou onde no seu código ela é acessada, sempre será a mesma instância única que é usada, garantindo um ponto centralizado e consistente de acesso à agenda de clientes.
