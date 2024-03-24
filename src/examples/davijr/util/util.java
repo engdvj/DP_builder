@@ -1,4 +1,4 @@
-package util;
+package examples.davijr.util;
 
 public class util {
     public enum TipoClienteEnum{

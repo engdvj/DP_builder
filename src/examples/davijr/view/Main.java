@@ -1,9 +1,8 @@
-package view;
+package examples.davijr.view;
 
-import conta.Conta;
-import conta.ContaCorrente;
-import factory.ContaFactory;
-import util.util;
+import examples.davijr.conta.Conta;
+import examples.davijr.factory.ContaFactory;
+import examples.davijr.util.util;
 
 public class Main {
     public static void main(String[] args) {

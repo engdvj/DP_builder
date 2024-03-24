@@ -1,9 +1,9 @@
-package factory;
+package examples.davijr.factory;
 
-import conta.Conta;
-import conta.ContaCorrente;
-import conta.ContaPoupanca;
-import util.util.TipoClienteEnum;
+import examples.davijr.conta.Conta;
+import examples.davijr.conta.ContaCorrente;
+import examples.davijr.conta.ContaPoupanca;
+import examples.davijr.util.util.TipoClienteEnum;
 
 public class ContaFactory {
 

@@ -1,4 +1,4 @@
-package conta;
+package examples.davijr.conta;
 
 public class ContaPoupanca extends Conta{
 
