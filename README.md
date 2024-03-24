@@ -12,7 +12,7 @@ No coração do padrão Builder está a ideia de separar a construção de um ob
 
 ## Aplicação do Padrão Builder
 
-Considerando o código fornecido como exemplo, podemos ver o padrão Builder em ação na criação de uma instância de `ContaCorrente`. Este exemplo simplifica a criação de uma conta corrente, evitando a necessidade de um construtor complexo e permitindo uma inicialização fluída e intuitiva dos objetos.
+Considerando o código fornecido como exemplo, podemos ver o padrão Builder em ação na criação de uma instância de `ContaCorrente`. Este exemplo simplifica a criação de uma examples.davijr.conta corrente, evitando a necessidade de um construtor complexo e permitindo uma inicialização fluída e intuitiva dos objetos.
 
 ### Exemplo de Uso
 
@@ -25,7 +25,7 @@ Conta contaCorrente = ContaCorrente.build()
                         .cliente("Davi");`
 ```
 
-Neste fragmento de código, a classe `ContaCorrente` estende `Conta` e utiliza um método estático `build` para iniciar a construção. Cada chamada subsequente a métodos como `saldo`, `numeroConta`, `agencia`, e `cliente` ajusta um aspecto específico da `ContaCorrente`, antes de finalizar a construção. O resultado é uma nova conta corrente com um saldo inicial de 500, número da conta 123456, agência 1, e cliente chamado Davi, demonstrando uma aplicação prática do padrão Builder para simplificar a criação de objetos complexos.
+Neste fragmento de código, a classe `ContaCorrente` estende `Conta` e utiliza um método estático `build` para iniciar a construção. Cada chamada subsequente a métodos como `saldo`, `numeroConta`, `agencia`, e `cliente` ajusta um aspecto específico da `ContaCorrente`, antes de finalizar a construção. O resultado é uma nova examples.davijr.conta corrente com um saldo inicial de 500, número da examples.davijr.conta 123456, agência 1, e cliente chamado Davi, demonstrando uma aplicação prática do padrão Builder para simplificar a criação de objetos complexos.
 
 ## Executando o Projeto
 
